@@ -1,26 +1,54 @@
-# BackupMyFile - Dosya Yedekleme Programý
-BackupMyFile yedekleme iþlerinizi kolay ve hýzlý þekilde tamamlamanýzý saðlayan bir yazýlýmdýr. Bu yazýlýmla verilerinizi bilgisayarýn depolama aygýtlarýndan belirleyeceðiniz herhangi birisine veya USB depolama aygýtýnýza kaydedebilirsiniz.
+# BackupMyFile
 
-# Özellikler:
- - Manual backup
- - Auto backup
-   - Dosya deðiþtiðinde backup
-   - Periyodik backup
- - Backup hýzý (0-20 arasý, 0 hýzlý)
-	
-# Koddan exe dosyasýný elde etme(Build iþlemi):
-  - Zip dosyasýný açýn ve BackUpMyFile.sln'i Visual Studio 2015 ile çalýþtýrýn. 
-  - Solution Explorer penceresinden projenin üzerine sað tuþ týklayarak build seçeneðine týklayýn.
-  - ".exe" uzantýlý dosyayý ...\BackUpMyFile\BackUpMyFile\bin\(Debug veya Release) klasörünün içerisinde bulacaksýnýz.
- 
-# Kullanýmý:
-  - Yedekleme iþlemini anlýk olarak yapmak istiyorsanýz yapmanýz gereken “Source” kýsmýna çift týklayarak yedeðini almak istediðiniz klasörün yolunu ve “Destination” kýsmýna çift týklayarak yedeði kopyalamak istediðiniz klasörün yolunu belirtmeniz. Daha sonra “Backup” butonuna týklamanýz yeterli olacaktýr.
-  - Auto backup özelliðini açmak için taskbardan(saðatin olduðu yer) programýn simgesine sað tuþ týklayýn ve "Options" seçeneðini seçin. Açýlan pencerede "Auto Backup" kutucuðunu seçili hale getirin.
-  - Yedekleme iþlemini belirli zaman aralýklarýyla yapmak istiyorsanýz “Source” ve “Destination” kýsmýný yukarýdaki gibi yaptýktan sonra “Backup Method” kutucuðundan "Periodically" seçeneðini seçerek saðýnda görünecek kutuya saniye cinsinden zamaný girmeniz ve "Add" butonuna týklayarak kaydetmeniz gerekiyor.
-  - Yedekleme iþlemini her hangi bir dosya deðiþtiðinde yapmak istiyorsanýz “Source” ve “Destination” kýsmýný yukarýdaki gibi yaptýktan sonra “Backup Method” kutucuðundan "When file changed" seçeneðini seçmeniz ve "Add" butonuna týklayarak kaydetmeniz gerekiyor.
-  - Daha önce kaydettiðiniz bir backup üzerinde deðiþiklik yapmak için, "Archive" butonuna týklayýnýz. Açýlan pencerede deðiþiklik yapmak istediðiniz backup'ý seçin. Silmek için "Delete" butonuna týklayýn. Deðiþtirmek için ise "Select" butonuna týklayarak deðiþiklikleri yapýn ve "Add butonuna týklayýn."
-  - Copyalama hýzýný belirlemek için taskbardan(saðatin olduðu yer) programýn simgesine sað tuþ týklayýn ve "Options" seçeneðini seçin. Açýlan pencerede "Speed choice" kutucuðundan hýzýný belirleyebilirsiniz.
+BackupMyFile is a C# application that automates the process of backing up files from a source folder to a destination folder. It supports automatic backups based on a specified time interval or when a file is changed in the source folder.
 
-[burakkocaman.com](http://burakkocaman.com/dosya-yedekleme-programibackupmyfile/)
+## Features
+- **Automatic Backup:** Automatically backs up files from the source folder to the destination folder.
 
-[github/Burak-CP](https://github.com/Burak-CP/BackUpMyFile/)
+- **Heartbeat Mechanism:** Regularly updates the status of registered devices (online/offline) in the database.
+- **USB Detection:** Detects when USB drives are inserted or removed and adjusts the backup process accordingly.
+- **File Change Monitoring:** Monitors files for changes and triggers backups when changes are detected.
+- **Configurable Backup Period:** Allows configuration of backup intervals or triggers backups when files change.
+- **Logging:** Logs activities and errors for easy monitoring and debugging.
+
+
+## Getting Started
+### Prerequisites
+- .NET Framework (version compatible with the application)
+- Windows OS
+
+### Installation
+1. Clone this repository:
+    ```sh
+    git clone https://github.com/yourusername/BackupMyFile.git
+    ```
+2. Open the solution in Visual Studio.
+
+3. Build the solution to restore the necessary NuGet packages and dependencies.
+
+## Usage
+1. **Configure the backup settings in the application:**
+   - **Source Folder:** The folder you want to back up.
+   - **Destination Folder:** The folder where backups will be stored.
+   - **Backup Period:** Time interval for automatic backups or set to trigger on file changes.
+
+2. **Run the application.**
+
+3. **The application will monitor the source folder and perform backups based on the configured settings.**
+
+## Contributing
+- Fork the repository.
+- Create your feature branch (git checkout -b feature/YourFeature).
+- Commit your changes (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature/YourFeature).
+- Open a pull request.
+
+## License
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
+
+This README provides a comprehensive overview of your project, including setup instructions, usage details, and code structure. Adjust the content as needed to better fit your specific project requirements.
+
+## Author
+- **Burak KOCAMAN**
+  - GitHub: [burakkcmn](https://github.com/burakkcmn)
+  - Email: [kocaman.burak.bk@gmail.com](mailto:kocaman.burak.bk@gmail.com)
